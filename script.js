@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const postsContainer = document.getElementById('posts');
     const postDetailsContainer = document.getElementById('post-details');
     const loadingIndicator = document.getElementById('loading');
+    const errorContainer = document.getElementById('error');
 
     async function fetchPostsAndUsers() {
         try {
@@ -82,7 +83,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function showError(message) {
-        const errorContainer = document.getElementById('error');
         errorContainer.textContent = message;
         errorContainer.style.display = 'block';
     }
